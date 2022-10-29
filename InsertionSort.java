@@ -4,19 +4,19 @@ public class InsertionSort {
     
     private static int[] readNums() {
 
-        Scanner scnr = new Scanner(System.in);
+        Scanner scnr = new Scanner(System.in);      
 
-        int size = scnr.nextInt();
+        int size = scnr.nextInt();              // Takes the first int entered by the user to instantiate the size of the array
 
-        int[] numbers = new int[size];
+        int[] numbers = new int[size];          // Creates a new int[] array with the size specified by the user
 
-        for (int i = 0; i < size; i++) {
+        for (int i = 0; i < size; i++) {        
 
-            numbers[i] = scnr.nextInt();
+            numbers[i] = scnr.nextInt();        // Adds the next ints inputted and adds it it the next index in the array
 
         }
 
-        return numbers;
+        return numbers;                         // Returns the array of numbers
     }
 
     private static void printNums(int[] nums) {
@@ -74,16 +74,16 @@ public class InsertionSort {
 
     public static void main(String[] args) {
 
-        int[] numbers = readNums();
+        int[] numbers = readNums();         // Reads in the numbers input by the user
 
-        printNums(numbers);
+        printNums(numbers);                 // Prints out the numbers
+        System.out.println();               
+
+        insertionSort(numbers);             // Passes the numbers array to the insertionSort()
         System.out.println();
 
-        insertionSort(numbers);
-        System.out.println();
-
-        System.out.println("comparisons: " + numComparisons);
-        System.out.println("swaps: " + numSwaps);
+        System.out.println("comparisons: " + numComparisons);   // Prints the amount of comparisons made 
+        System.out.println("swaps: " + numSwaps);               // Prints the amount of swaps made 
 
     }
 }
